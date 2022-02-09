@@ -121,15 +121,15 @@ void TestNoncopiableInsert() {
         v.PushBack(X(i));
     }
 
-    // в начало
+    // to the beginning
     v.Insert(v.begin(), X(size + 1));
     assert(v.GetSize() == size + 1);
     assert(v.begin()->GetX() == size + 1);
-    // в конец
+    // to the end
     v.Insert(v.end(), X(size + 2));
     assert(v.GetSize() == size + 2);
     assert((v.end() - 1)->GetX() == size + 2);
-    // в середину
+    // in the middle
     v.Insert(v.begin() + 3, X(size + 3));
     assert(v.GetSize() == size + 3);
     assert((v.begin() + 3)->GetX() == size + 3);
